@@ -1,0 +1,121 @@
+.faq {
+    padding: 120px 0 150px;
+}
+.title {
+    color: #fff;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: #7d7d7d;
+    font-family: "Akira", sans-serif;
+    font-size: 110px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: normal;
+    letter-spacing: 11px;
+    margin-bottom: 20px;
+}
+.wrapper {
+    position: relative;
+}
+.mobile {
+    display: none;
+}
+.img {
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 10px;
+    user-select: none;
+}
+.bold {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    user-select: none;
+    padding: 20px 15px;
+    color: #060606;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 120%;
+    justify-content: space-between;
+}
+.item {
+    border-bottom: 1px solid #d9d9d9;
+}
+.bold::after {
+    content: "";
+    display: block;
+    width: 24px;
+    height: 24px;
+    min-width: 24px;
+    background-image: url("/img/faq-arrow.svg");
+    background-repeat: no-repeat;
+    transition: all 0.4s;
+}
+.text {
+    padding: 4px 15px 20px;
+    color: #4e4e4e;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 140%;
+    letter-spacing: 0.2px;
+    display: none;
+}
+
+.open.text {
+    display: block;
+}
+.open.bold::after {
+    transform: rotate(180deg);
+}
+
+@media (max-width: 1770px) {
+    .title {
+        font-size: 80px;
+        letter-spacing: 4px;
+    }
+    .img {
+        width: 550px;
+        height: auto;
+        top: 5px;
+    }
+}
+
+@media (max-width: 1250px) {
+    .img {
+        display: none;
+    }
+}
+
+@media (max-width: 992px) {
+    .title {
+        font-size: 30px;
+        line-height: normal;
+        letter-spacing: 1px;
+        -webkit-text-stroke-width: 1px;
+        margin: 0;
+    }
+    .mobile {
+        display: block;
+        margin: 5px 0 20px;
+        width: 100%;
+        height: auto;
+    }
+    .bold {
+        font-size: 16px;
+        line-height: 120%;
+    }
+    .text {
+        font-size: 14px;
+        line-height: 140%;
+        letter-spacing: 0.2px;
+    }
+}
+
+@media (max-width: 360px) {
+    .title {
+        font-size: 26px;
+    }
+}

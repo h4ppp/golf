@@ -1,0 +1,290 @@
+.section {
+    background-image: url("/img/bg-hero.png");
+    background-size: cover;
+    background-position: bottom center;
+    padding: 136px 0 220px;
+}
+.title {
+    text-align: center;
+    color: #060606;
+    font-family: "Akira", sans-serif;
+    font-size: 129px;
+    font-weight: 800;
+    line-height: normal;
+    letter-spacing: 11px;
+    margin-bottom: 320px;
+}
+.title span {
+    color: #060606;
+    font-size: 100px;
+    font-weight: 800;
+    line-height: normal;
+    letter-spacing: 0;
+}
+.list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+.block {
+    width: 475px;
+    margin: 0 auto;
+    order: 1;
+}
+.playButton {
+    height: 108px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-family: "Akira", sans-serif;
+    font-size: 28px;
+    font-weight: 800;
+    line-height: normal;
+    text-transform: uppercase;
+    border-radius: 30px;
+    border: 1px solid #fff;
+    background: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(42px);
+}
+.playButton img {
+    margin-left: 5px;
+}
+.item {
+    width: 559px;
+    position: relative;
+    padding: 9px 0 19px 19px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    background: rgba(255, 255, 255, 0.05);
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(42px);
+    border-radius: 30px;
+    overflow: hidden;
+    align-self: stretch;
+}
+.item::before {
+    content: "";
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 93px;
+    height: 93px;
+    background-image: url("/img/main-arrow.svg");
+    background-repeat: no-repeat;
+    z-index: 4;
+}
+.item::after {
+    content: "";
+    position: absolute;
+    right: -83px;
+    top: -159px;
+    width: 119px;
+    height: 347px;
+    flex-shrink: 0;
+    background: #6b7439;
+    filter: blur(17px);
+}
+.item:last-child {
+    order: 1;
+}
+.item:last-child::after {
+    background: #060606;
+}
+.itemTitle {
+    margin: 16px 0 8px;
+    color: #fff;
+    font-family: "Akira", sans-serif;
+    font-size: 22px;
+    font-weight: 800;
+    line-height: normal;
+    text-transform: uppercase;
+    padding-right: 109px;
+}
+.itemText {
+    color: #fff;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 120%;
+    padding-right: 109px;
+}
+.images {
+    display: flex;
+    margin-left: -10px;
+    width: calc(100% + 30px);
+}
+.images img {
+    width: 140px;
+    min-width: 140px;
+    height: 140px;
+    border-radius: 20px;
+    object-fit: cover;
+    margin-right: 10px;
+}
+.soc {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 50px;
+}
+.socItem {
+    margin: 0 2px;
+    transition: all 0.4s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60px;
+    height: 60px;
+    border-radius: 15px;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(42px);
+}
+.socItem:hover {
+    opacity: 0.8;
+}
+
+@media (max-width: 1770px) {
+    .block {
+        width: 100%;
+        order: 0;
+    }
+    .list {
+        flex-wrap: wrap;
+    }
+    .item {
+        width: calc(50% - 15px);
+        margin: 0;
+    }
+    .playButton {
+        height: 79px;
+        font-size: 22px;
+        border-radius: 15px;
+        width: 350px;
+        max-width: 100%;
+    }
+    .playButton img {
+        width: 35px;
+        margin-left: 5px;
+    }
+    .soc {
+        margin-top: 12px;
+        margin-bottom: 24px;
+    }
+    .section {
+        padding-bottom: 60px;
+    }
+    .block {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 32px;
+    }
+    .title {
+        font-size: 80px;
+        line-height: 100%;
+        margin-bottom: 200px;
+    }
+    .title span {
+        font-size: 60px;
+        line-height: 100%;
+    }
+}
+
+@media (max-width: 1250px) {
+    .title {
+        font-size: 70px;
+        letter-spacing: 4px;
+    }
+}
+
+@media (max-width: 992px) {
+    .item:last-child {
+        display: none;
+    }
+    .block {
+        width: 100%;
+        display: block;
+    }
+    .playButton {
+        width: 350px;
+        margin: 0 auto;
+    }
+    .item {
+        width: 100%;
+        margin: 0;
+        padding: 9px 9px 11px;
+        border-radius: 8px 8px 10px 8px;
+    }
+    .item::after {
+        display: none;
+    }
+    .itemText {
+        display: none;
+    }
+    .item::before {
+        width: 50px;
+        height: 50px;
+        right: 0;
+        bottom: 0;
+        background-size: 50px;
+    }
+    .images {
+        justify-content: space-between;
+        width: auto;
+        margin: 0;
+        padding-right: 9px;
+    }
+    .images img {
+        height: auto;
+        width: calc(20% - 6px);
+        min-width: calc(20% - 6px);
+        aspect-ratio: 1;
+        border-radius: 10px;
+    }
+    .list {
+        display: block;
+    }
+    .title {
+        font-size: 44px;
+        line-height: normal;
+        letter-spacing: 4.4px;
+        line-height: 44px;
+        margin-bottom: 300px;
+    }
+    .title span {
+        font-size: 26px;
+        letter-spacing: 0;
+        margin-top: 5px;
+    }
+    .section {
+        padding-top: 100px;
+        padding-bottom: 80px;
+        background-size: normal;
+    }
+    .block {
+        margin-bottom: 24px;
+    }
+    .soc {
+        margin-bottom: 0;
+    }
+    .itemTitle {
+        margin: 10px 0 0 0;
+        font-size: 18px;
+        letter-spacing: 0;
+        width: 220px;
+        padding: 0;
+    }
+}
+@media (max-width: 360px) {
+    .title {
+        font-size: 36px;
+        line-height: 36px;
+    }
+    .title span {
+        font-size: 22px;
+        line-height: 22px;
+    }
+}

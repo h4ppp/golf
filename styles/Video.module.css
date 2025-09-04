@@ -1,0 +1,103 @@
+.video {
+    padding: 400px 0 151px;
+    position: relative;
+    background-image: url("/img/bg-video.png");
+    background-size: cover;
+    background-position: bottom center;
+}
+.wrapper {
+    position: relative;
+    z-index: 3;
+    text-align: center;
+}
+.title {
+    color: #fff;
+    font-family: "Akira", sans-serif;
+    font-size: 120px;
+    font-weight: 800;
+    line-height: 100px;
+    letter-spacing: 9.6px;
+    text-transform: uppercase;
+}
+.title span {
+    font-size: 100px;
+    letter-spacing: 8px;
+}
+.subtitle {
+    margin-top: 20px;
+    opacity: 0.5;
+    color: #fff;
+    font-size: 40px;
+    font-weight: 400;
+    line-height: 120%;
+}
+
+@media (max-width: 1770px) {
+    .title {
+        font-size: 90px;
+        letter-spacing: 5px;
+        line-height: 80px;
+    }
+    .title span {
+        font-size: 70px;
+        letter-spacing: 5px;
+    }
+    .subtitle {
+        font-size: 32px;
+    }
+    .video {
+        padding-top: 350px;
+    }
+}
+
+@media (max-width: 1250px) {
+    .title {
+        font-size: 72px;
+        letter-spacing: 5px;
+        line-height: 50px;
+    }
+    .title span {
+        font-size: 55px;
+        letter-spacing: 5px;
+    }
+    .subtitle {
+        font-size: 26px;
+    }
+    .video {
+        padding-top: 240px;
+    }
+}
+
+@media (max-width: 992px) {
+    .title {
+        font-size: 46px;
+        letter-spacing: 2px;
+        line-height: normal;
+    }
+    .title span {
+        font-size: 24px;
+        letter-spacing: 1.4px;
+        display: block;
+        line-height: normal;
+    }
+    .subtitle {
+        font-size: 16px;
+        line-height: 120%;
+        margin-top: 24px;
+    }
+    .video {
+        padding-top: 160px;
+        padding-bottom: 86px;
+    }
+}
+
+@media (max-width: 360px) {
+    .title {
+        font-size: 38px;
+        letter-spacing: 1.5px;
+    }
+    .title span {
+        font-size: 22px;
+        letter-spacing: 1.2px;
+    }
+}

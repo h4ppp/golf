@@ -1,0 +1,117 @@
+.form {
+    padding-bottom: 88px;
+    overflow: hidden;
+    position: relative;
+}
+.title {
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: #000;
+    font-family: "Akira", sans-serif;
+    font-size: 80px;
+    -webkit-text-fill-color: #fff;
+    font-weight: 800;
+    line-height: 80px;
+    letter-spacing: 8px;
+    margin-bottom: 20px;
+}
+.subtitle {
+    width: 751px;
+    max-width: 100%;
+    color: #060606;
+    font-size: 32px;
+    font-weight: 500;
+    line-height: 120%;
+    margin-bottom: 20px;
+}
+.list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.formWrapper {
+    width: 844px;
+    max-width: 100%;
+    display: block;
+}
+.block {
+    width: calc(50% - 12px);
+    margin-bottom: 16px;
+}
+.img {
+    position: absolute;
+    top: -211px;
+    left: calc(50% - 80px);
+    pointer-events: none;
+    display: block;
+    height: auto;
+}
+.btn {
+    height: 96px;
+    border-radius: 24px;
+    border: 1px solid rgba(34, 34, 34, 0.3);
+    background: linear-gradient(180deg, #87da1a 0%, #29981d 100%);
+    backdrop-filter: blur(42px);
+    font-size: 28px;
+    color: #060606;
+    margin-top: 30px;
+    width: 100%;
+    box-shadow: none;
+}
+
+@media (max-width: 1770px) {
+    .img {
+        width: 1200px;
+        left: calc(50% + 150px);
+        top: -100px;
+    }
+}
+
+@media (max-width: 992px) {
+    .img {
+        width: 500px;
+        left: auto;
+        right: -120px;
+        top: auto;
+        bottom: -40px;
+    }
+    .form {
+        padding-bottom: 380px;
+        padding-top: 0;
+    }
+    .title {
+        font-size: 26px;
+        line-height: 28px;
+        margin-bottom: 16px;
+        -webkit-text-stroke-width: 1px;
+        width: 350px;
+        max-width: 100%;
+        letter-spacing: 2px;
+    }
+    .subtitle {
+        margin-bottom: 20px;
+        width: 350px;
+        font-size: 14px;
+        line-height: 120%;
+    }
+    .formWrapper {
+        width: 100%;
+    }
+    .btn {
+        height: 59px;
+        font-size: 18px;
+        border-radius: 12px;
+    }
+}
+
+@media (max-width: 767px) {
+    .block {
+        width: 100%;
+    }
+}
+
+@media (max-width: 360px) {
+    .img {
+        right: -170px;
+    }
+}
