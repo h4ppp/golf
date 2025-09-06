@@ -53,17 +53,24 @@ export default function SignInPage() {
         }
         setError("");
 
-        const res = await fetch("/api/login", {
-            method: "POST",
-            headers: { "Content-Type": "application/json" },
-            body: JSON.stringify(form),
-        });
+        try {
+            const res = await fetch("/api/login", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify(form),
+            });
 
-        const data = await res.json();
-        if (res.ok) {
-            router.push("/account");
-        } else {
-            setError(data.error || "Login failed");
+            const data = await res.json();
+            console.log("LOGIN RESPONSE:", data);
+
+            if (res.ok) {
+                router.push("/account");
+            } else {
+                setError(data.error || "Login failed");
+            }
+        } catch (err) {
+            console.error("LOGIN REQUEST ERROR:", err);
+            setError("Something went wrong");
         }
     };
 
